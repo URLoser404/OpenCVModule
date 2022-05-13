@@ -20,8 +20,8 @@ class handDector():
         self.mpHands =  mp.solutions.hands
         self.hands = self.mpHands.Hands(self.mode,
                                         self.maxHands,
-                                        self.dectionCon,
-                                        self.trackCon)
+                                        min_detection_confidence = self.dectionCon,
+                                        min_tracking_confidence = self.trackCon)
         self.mpDraw = mp.solutions.drawing_utils
 
 
